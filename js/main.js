@@ -163,20 +163,24 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
+  
+
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
   li.append(name);
 
+
   const neighborhood = document.createElement('p');
-  neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.innerHTML = '<i class="far fa-map"></i> '+restaurant.neighborhood;
   li.append(neighborhood);
 
+  
   const address = document.createElement('p');
-  address.innerHTML = restaurant.address;
+  address.innerHTML += '<i class="fas fa-map-marker-alt"></i> '+restaurant.address;
   li.append(address);
 
   const more = document.createElement('a');
-  more.innerHTML = 'View Details';
+  more.innerHTML =  '<i class="fas fa-search-location"></i> View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 

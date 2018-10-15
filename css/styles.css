@@ -20,7 +20,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+	color: #EA5751;
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -129,13 +129,11 @@ nav h1 a {
 }
 .filter-options select {
   background-color: white;
-  border: 1px solid #fff;
   font-family: Arial,sans-serif;
   font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
   margin: 10px;
-  padding: 0 10px;
   width: 200px;
 }
 
@@ -146,16 +144,17 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
-  text-align: left;
-  width: 270px;
+  max-width: 350px;
+  box-shadow: #ccc 1px 1px 4px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -166,31 +165,38 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #EA5751;
   font-family: Arial,sans-serif;
   font-size: 14pt;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.3;
   margin: 20px 0 10px;
   text-transform: uppercase;
+  text-align: center;
 }
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
+  text-align: left;
+  padding: 0 20px;
 }
 #restaurants-list li a {
-  background-color: orange;
-  border-bottom: 3px solid #eee;
+  background-color: #EA5751;
   color: #fff;
-  display: inline-block;
+  display: flex;
   font-size: 10pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
 }
+
+
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
@@ -218,7 +224,7 @@ nav h1 a {
   width: 50%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #EA5751;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -282,4 +288,60 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/*====================== Custom Select: CodePen.IO - https://codepen.io/raubaca/pen/VejpQP; ======================*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #fff;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #eee;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #777;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #eee;
+  pointer-events: none;
+  color: #777;
+}
+/* Transition */
+.select:hover::after {
+  color: #555;
+}
+.select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
 }
