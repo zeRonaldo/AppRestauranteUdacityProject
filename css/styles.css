@@ -228,7 +228,6 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
   width: 50%;
 }
 #restaurant-name {
@@ -352,4 +351,36 @@ select::-ms-expand {
   -webkit-transition: .25s all ease;
   -o-transition: .25s all ease;
   transition: .25s all ease;
+}
+
+.user-info{
+  clear: both;  
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 20px 0 0;
+}
+.user-info .reviewer{
+    font-size: 14pt;
+    line-height: 0.9;
+    margin: 0;
+    max-width: 200px;
+    font-weight: bold;
+
+}
+.user-info .date{
+  color: #555;
+  max-width: 200px;
+}
+
+.user-info .rating{
+  float: right;
+}
+.review-text{
+  text-indent: 15px;
+}
+
+.fa-star{
+  color: #EAB051;
 }
